@@ -1,0 +1,39 @@
+nav {
+    height:10vh;
+    /* height: 17vh; */
+    background-color: #cead83; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.button {
+    background-color: rgb(253, 253, 253);
+    color: rgb(172, 99, 99);
+    text-decoration: none;
+    margin: 4rem;
+    font-size: 20px;
+    border: 2px solid rgb(199, 149, 149); 
+    border-radius: 6px;
+    padding: 5px 22px;
+
+}
+
+.nav-logo-container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* #bumbu-name{
+    height: 30vh;
+    margin-top: 8em;
+    margin-left: -4em;
+} */
+
+#bumbu-logo{
+    height: 25vh;
+    /* margin-top: 0; */
+    margin-left: -6em;
+}
+

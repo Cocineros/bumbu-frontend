@@ -1,0 +1,38 @@
+.dash-container{
+   margin: 2rem;
+}
+
+.header {
+    margin-left: 5rem;
+    font-size: large;
+}
+
+.sidebar {
+    background-color: transparent;
+}
+
+.dash-nav {
+    text-align: left;
+    margin-left: 2rem;
+
+}
+.layout{
+    background-color: transparent;
+}
+
+.search {
+    margin-bottom: 2rem;
+}
+
+.btn {
+    font-size: x-large;
+}
+
+.vl {
+    border-left: 2px solid rgb(221, 221, 221);
+    height: 100vh;
+    position: absolute;
+    left: 19%;
+    margin-left: -3px;
+    top: 150px;
+  }

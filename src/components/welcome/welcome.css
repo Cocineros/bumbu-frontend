@@ -1,0 +1,45 @@
+#home-logo-container{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+
+}
+#home-logo {
+height: 70vh;
+}
+
+#welcome-text-container {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2em;
+    font-weight: 500;
+    line-height: 0.3em;
+    margin-top: -14vh;
+
+}
+
+#text-line-one {
+    color: black;
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
+#recipe-img {
+    background-color: red;
+    height: 60vh;
+    width: 30vw;
+    transform: rotate(15deg);
+    position: absolute;
+    top: 20vh;
+    left: -20vw;
+}
+
+#recipe-img2 {
+    background-color: red;
+    height: 60vh;
+    width: 30vw;
+    transform: rotate(-15deg);
+    position: absolute;
+    top: 35vh;
+    right: -20vw;
+}

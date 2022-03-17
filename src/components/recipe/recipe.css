@@ -1,0 +1,71 @@
+#recipe-page {
+    width: 80vw;
+    margin:auto;
+    background-color: brown;
+}
+
+#back-function {
+    margin-top: 5vh;
+    margin-left: 5vw;
+    display: flex;
+    flex-direction: column;
+}
+#back-btn{
+    font-size: 4vh;
+    text-decoration: none;
+    color: gray
+}
+
+#back-text{
+    font-size: 2vh;
+}
+
+#dish-name-container {
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+}
+
+#dish-name {
+    font-size: 6vh;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    margin-top: 2vh;
+
+}
+
+#ingredients-container {
+    height: 40vh;
+    width: 30vw;
+    /* background-color: blue; */
+    margin-left: 5vw;
+}
+
+#directions-container {
+    margin-left: 5vw;
+}
+
+
+#sample-image{
+width: 500px;
+height: 500px;
+object-fit: scale-down;
+margin-bottom: 10vh;
+}
+
+#menu-bar{
+    /* background-color: green; */
+    height: 6vh;
+    width: 10vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 4vh;
+    background-color: black;
+
+
+    
+}

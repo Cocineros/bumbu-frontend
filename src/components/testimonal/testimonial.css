@@ -1,0 +1,96 @@
+/* .testimonial-container {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.test-containers {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-around;
+
+} */
+
+.section-title{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10vh;
+}
+
+h2 {
+    width: 80%
+}
+
+/* #test1 {
+    width: 400px;
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+
+#test2 {
+    width: 400px;
+    left: 600px;
+    display: flex;
+    position: absolute;
+    right: 0;
+}
+
+#test3 {
+    width: 400px;
+    display: flex;
+    flex-direction: row-reverse;
+
+} */
+
+
+#test1 {
+    width: 25vw;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 25vh;
+
+}
+
+#test2-container {
+    width: 25vw;
+    /* left: 600px; */
+    display: flex;
+    flex-direction: row;
+    height: 50vh;
+}
+
+#test2-text {
+    display: flex;
+    align-items: center;
+    height: 50vh;
+    justify-content: flex-start;
+
+}
+
+#test3 {
+    width: 25vw;
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+.parent-container {
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.left-column{
+height: 70vh;
+margin-right: 5vw;
+}
+
+.right-column {
+    display: flex;
+    margin-left: 5vw;
+}
+
+

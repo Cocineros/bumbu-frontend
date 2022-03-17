@@ -1,0 +1,24 @@
+.login {
+    border: 2px solid rgb(199, 149, 149);
+    max-width: 30%;
+    margin: 6rem auto;
+}
+
+.login h2, .login h3{
+    text-align: center;
+    text-decoration: none;
+}
+
+.login-form {
+    margin: 2rem auto;
+}
+
+input {
+    width: 80%;
+    padding: 0.5rem;
+    color: #1a1a1a;
+    font-size: 1rem;
+    border: 1px solid #484848;
+    border-radius: 0.15rem;
+    margin: 1rem ;
+}

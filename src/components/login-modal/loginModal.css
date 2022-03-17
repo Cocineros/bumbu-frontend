@@ -1,0 +1,50 @@
+/* .buttons{
+    display: inline;
+    position: absolute;
+    bottom: 4rem;
+} 
+
+#login-btn{
+    background-color: rgb(253, 253, 253);
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 6px;
+} */
+
+/* .landing-container {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+
+}
+
+#signup-btn{
+    position: absolute;
+    margin-left: 50vw;
+    margin-right: 50vw;
+    bottom: 4rem;
+}
+
+.button {
+    background-color: rgb(253, 253, 253);
+    color: rgb(172, 99, 99);
+    text-decoration: none;
+    font-size: 20px;
+    border: 2px solid rgb(199, 149, 149); 
+    border-radius: 6px;
+    padding: 5px 22px;
+    margin: 2rem;
+}
+
+.buttons {
+    background-color:rgb(199, 149, 149);
+    border-radius: 6px;
+
+} */
+
+#login-btn {
+    position: absolute;
+    bottom: 3vh;
+    right: 40vw;
+    width: 7vw;
+}
