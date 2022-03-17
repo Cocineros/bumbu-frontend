@@ -5,6 +5,7 @@ import Testimonial from '../testimonal/Testimonial'
 import About from '../about/About'
 import Footer from '../footer/Footer'
 import LoginModal from '../login-modal/LoginModal'
+import Authorized from '../authorized/index'
 import './home.css'
 // import LogoArtwork from '../../assets/logo-artwork.svg'
 import { BackTop } from 'antd';
@@ -15,6 +16,7 @@ import { BackTop } from 'antd';
 export default function Home() {
     return (
         <>
+        <Authorized/>
         <div class="home-components">
         <Welcome />
         
