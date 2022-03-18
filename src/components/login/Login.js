@@ -23,7 +23,6 @@ export default function Login() {
 
     const handleFormSubmit = async (event) => {
         event.preventDefault();
-        console.log(profileLogin)
 
         try {
             const { data } = await login({
