@@ -1,96 +1,50 @@
-/* .testimonial-container {
-    display: flex;
-    height: 100vh;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.test-containers {
-    display: flex;
-    height: 100vh;
-    flex-direction: column;
-    justify-content: space-around;
-
-} */
-
 .section-title{
     display: flex;
     justify-content: center;
     margin-bottom: 10vh;
 }
 
-h2 {
-    width: 80%
-}
 
-/* #test1 {
-    width: 400px;
+.test-containers{
+    width: 80%;
+    height: auto;
     display: flex;
     flex-direction: row-reverse;
-
 }
 
-#test2 {
-    width: 400px;
-    left: 600px;
-    display: flex;
-    position: absolute;
-    right: 0;
+.test-text{
+    width: 75%;
+    height: auto;
 }
 
-#test3 {
-    width: 400px;
-    display: flex;
-    flex-direction: row-reverse;
-
-} */
-
-
-#test1 {
-    width: 25vw;
-    display: flex;
-    flex-direction: row-reverse;
-    margin-bottom: 25vh;
-
+.avatar {
+    width: 10%;
+    height: auto;
 }
 
-#test2-container {
-    width: 25vw;
-    /* left: 600px; */
+
+
+.parent-container{
     display: flex;
     flex-direction: row;
     height: 50vh;
+    width: auto;
 }
-
-#test2-text {
-    display: flex;
-    align-items: center;
-    height: 50vh;
-    justify-content: flex-start;
-
-}
-
-#test3 {
-    width: 25vw;
-    display: flex;
-    flex-direction: row-reverse;
-
-}
-.parent-container {
-    display: flex;
-    justify-content: center;
-
-}
-
 
 .left-column{
-height: 70vh;
-margin-right: 5vw;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.right-column {
+.right-column{
+    width: 50%;
+    height: auto;
     display: flex;
-    margin-left: 5vw;
+    flex-direction: column;
+    justify-content: center;
 }
+
 
 
