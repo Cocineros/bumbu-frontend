@@ -30,11 +30,7 @@ export default function LoginModal(){
           visible={isModalVisitble}
           onOk={handleOk}
           onCancel={handleCancel}
-          footer={
-         <Button key="submit" onClick={handleOk}>
-              Login
-        </Button>
-          }
+          footer={[]}
             >
           <Login />
         </Modal>
