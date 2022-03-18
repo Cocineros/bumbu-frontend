@@ -2,6 +2,7 @@ import 'antd/dist/antd.css';
 import { Input, Space } from 'antd';
 import { AudioOutlined } from '@ant-design/icons';
 import { Layout } from 'antd';
+import Auth from '../utils/auth';
 import {
     PlusSquareFilled,
     LoginOutlined
@@ -23,6 +24,10 @@ export default function Dashboard() {
     );
 
     const onSearch = value => console.log(value);
+    const logout = (event) => {
+        event.preventDefault();
+        Auth.logout();
+      };
     return (
         <>
         <div className="dash-container">
@@ -34,7 +39,7 @@ export default function Dashboard() {
             <div class="dash-nav">
             <a href="/addRecipe"><h3><PlusSquareFilled className="btn" />&nbsp; Add a Recipe</h3></a>
             <br/>
-            <a href="/"><h3><LoginOutlined className="btn" />&nbsp; Logout</h3></a>
+            <button onClick={logout}><h3><LoginOutlined className="btn" />&nbsp; Logout</h3></button>
             </div>
             </Sider>
             <div class="vl"></div>

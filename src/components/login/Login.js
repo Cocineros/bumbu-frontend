@@ -3,6 +3,7 @@ import './login.css'
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_PROFILE } from '../utils/mutations';
+import Dashboard from '../dashboard/dashboard'
 
 import Auth from '../utils/auth';
 
@@ -30,8 +31,8 @@ export default function Login() {
             });
 
             Auth.login(data.login.token)
-        } catch (e) {
-            console.error(e)
+        } catch (error) {
+            console.error(error)
         }
 
         setProfileLogin({
@@ -44,9 +45,8 @@ export default function Login() {
         <>
             {data ? (
                 <p>
-                    Success! You may now head{' '}
-                    <Link to="/">back to the homepage.</Link>
-                </p>
+                Success! You may now head to the dashboard.
+            </p>
             ) : (
                 <form className="login-form" onSubmit={handleFormSubmit}>
 
