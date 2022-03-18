@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# bumbu cook-book
+// links
 
-## Available Scripts
+# description
+This app was created for users to store and share recipes with other users. Users can create accounts where they will have access to all their recipes, including directions, cook time, ingredients and a short description. These recipes will be displayed on attractive cards. Future versions will include filtering for time and orgainzing cards in various categories. 
 
-In the project directory, you can run:
+# Usage
 
-### `npm start`
+```md
+GIVEN a localhost webpage
+WHEN I visit the site for the first time
+THEN I am presented with the homepage, which includes a navigation bar, a description of the site, example recipe cards, login and sign-up buttons and a footer
+WHEN I click the sign-up button
+THEN I will be directed to a form with name, email and password fields I will fill out 
+WHEN I click submit button
+THEN the "You have succesfully created a profile" message will appear and I will be directed to my user dashboard
+WHEN I click login button
+THEN I will be prompted to enter my username and password and click the login button
+THEN I will be directed to my user dashboard
+THEN I will be presented with the "add recipe" button and cards displaying my saved recipes
+WHEN I click "add recipe" button
+THEN I will be directed to a page on which I will input recipe name, time, ingredients, directions and description fields
+WHEN I click submit button
+THEN the recipe will be saved to my recipe cards
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Contribution Guidelines
+Report bug and feature requests.
 
-### `npm test`
+# Questions
+If you have any questions, please contact us on 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# License 
+Licensed under [MIT License](https://opensource.org/licenses/MIT).
