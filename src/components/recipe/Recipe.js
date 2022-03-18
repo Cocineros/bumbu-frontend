@@ -1,8 +1,14 @@
 import './recipe.css'
 import SampleImage from '../../assets/sample-recipe-image.JPG'
 import { EditOutlined, DeleteOutlined, ShareAltOutlined, RollbackOutlined } from '@ant-design/icons';
+import { useState } from 'react'
 
 export default function Recipe() {
+    const [ isActive, setActive ] = useState("false");
+    const ToggleClass = () => {
+        setActive (!isActive);
+    }
+
     return (
         <>
         <div id="page"> 
@@ -27,15 +33,20 @@ export default function Recipe() {
                 </div>
                 <div id="ing-dir-container">
                 <div id="ingredients-container">
-                    <div i="ingredients-text">
+                    <div id="ingredients-text">
 
                     <h3> INGREDIENTS </h3>
                     <ul>
-                        <li>butter</li>
-                        <li>milk</li>
-                        <li>sugar</li>
-                        <li>flour</li>
-                        <li>eggs</li>
+                        <li className={isActive? "ingredient" : "strikethrough"} onClick={ToggleClass}>butter</li>
+                        {/* <li className="ingredient"> eggs </li>
+                        <li className="ingredient"> milk </li>
+                        <li className="ingredient"> flour </li>
+                        <li className="ingredient"> sugar </li> */}
+                        <li className={isActive? "ingredient" : "strikethrough"} onClick={ToggleClass}>eggs</li>
+                        <li className={isActive? "ingredient" : "strikethrough"} onClick={ToggleClass}>milk</li>
+                        <li className={isActive? "ingredient" : "strikethrough"} onClick={ToggleClass}>flour</li>
+                        <li className={isActive? "ingredient" : "strikethrough"} onClick={ToggleClass}>sugar</li>
+                    
                     </ul>
                     </div>
                 </div>

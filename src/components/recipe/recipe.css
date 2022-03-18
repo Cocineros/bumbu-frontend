@@ -1,13 +1,9 @@
 #page{
     background-color: #f6f6e9;
-
 }
 
 #recipe-page {
-    /* width: 80vw; */
     margin: auto;
-    /* background-color: brown; */
-
 }
 
 #back-function {
@@ -37,13 +33,11 @@
     font-family: 'Cormorant Garamond', serif;
     font-weight: 600;
     margin-top: 2vh;
-
 }
 
 #ingredients-container {
     height: 40vh;
     width: 45vw;
-    /* background-color: blue; */
     margin-left: 5vw;
     display: flex;
     justify-content: center;
@@ -56,24 +50,20 @@
     justify-content: center;
 }
 
-
-
 #sample-image{
 width: 500px;
 height: 500px;
+max-width: 100%;
 object-fit: scale-down;
 margin-bottom: 10vh;
 }
 
 #image-container{
-    /* background-color: white;
-    width: 80vw; */
     display: flex;
     justify-content: center;
 }
 
 #menu-bar{
-    /* background-color: green; */
     height: 6vh;
     width: 15vw;
     display: flex;
@@ -81,7 +71,6 @@ margin-bottom: 10vh;
     justify-content: space-around;
     align-items: center;
     font-size: 4vh;
-    /* background-color: black; */
     position: relative;
     top: 2vh;;
     left: 65vw;
@@ -92,4 +81,16 @@ margin-bottom: 10vh;
     display: flex;
     flex-direction: row;
     width: 90vw;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 5vh;
+}
+
+.ingredient{
+    list-style-type: circle;
+
+}
+
+.strikethrough {
+    list-style-type: circle;
+    text-decoration: line-through;
 }
