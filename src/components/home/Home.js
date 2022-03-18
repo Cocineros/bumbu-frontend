@@ -28,7 +28,7 @@ export default function Home() {
             </>
           ) : (
             <>
-             <div class="home-components">
+             <div className="home-components">
         <Welcome />
         
         <div id="buttons-container">
