@@ -37,8 +37,8 @@ export default function Signup() {
       });
 
       Auth.login(data.addProfile.token);
-    } catch (e) {
-      console.error(e);
+    } catch (error) {
+      console.error(error);
     }
 
     setProfileSignup({
