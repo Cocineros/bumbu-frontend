@@ -1,5 +1,6 @@
 import LogoArtwork from '../../assets/bumbu-log-tgt.png'
 import './welcome.css'
+import OldRecipe from '../../assets/recipe-old.png'
 
 
 export default function Welcome() {
@@ -19,12 +20,13 @@ export default function Welcome() {
                     <p className="welcome-text">and access them from anywhere in the world!</p>
                 </div>
 
-                <div id="recipe-img">
-                    recipe image
-                </div>
-                {/* <div id="recipe-img2">
+                {/* <div id="recipe-img">
+                    
                     recipe image
                 </div> */}
+                <img src={OldRecipe} id="old-recipe-left" />
+
+                <img src={OldRecipe} id="old-recipe-right"/>
             </div>
         </>
     )

@@ -5,6 +5,8 @@ import { EditOutlined, DeleteOutlined, ShareAltOutlined, RollbackOutlined } from
 export default function Recipe() {
     return (
         <>
+        <div id="page"> 
+
             <div id="back-function">
                 <a href="/dashboard" id="back-btn">
                 <RollbackOutlined />
@@ -20,10 +22,13 @@ export default function Recipe() {
                 <div id="dish-name-container">
                     <h3 id="dish-name">cream puffs</h3>
                 </div>
-                <div id="image-contianer">
+                <div id="image-container">
                     <img src={SampleImage} id="sample-image" alt="sample-recipe-image" />
                 </div>
+                <div id="ing-dir-container">
                 <div id="ingredients-container">
+                    <div i="ingredients-text">
+
                     <h3> INGREDIENTS </h3>
                     <ul>
                         <li>butter</li>
@@ -32,18 +37,24 @@ export default function Recipe() {
                         <li>flour</li>
                         <li>eggs</li>
                     </ul>
+                    </div>
                 </div>
                 <div id="directions-container">
+                    <div id="directions-text">
+
                     <h3> DIRECTIONS </h3>
                     <ol>
                         <li>melt the butter</li>
                         <li>add the milk, sugar, flour, and eggs</li>
                         <li>place in a baking dish and bake for 30 minutes</li>
                     </ol>
+                    </div>
+                </div>
                 </div>
 
                 
             </div>
+        </div>
         </>
 
     )

@@ -1,11 +1,17 @@
+#page{
+    background-color: #f6f6e9;
+
+}
+
 #recipe-page {
-    width: 80vw;
-    margin:auto;
-    background-color: brown;
+    /* width: 80vw; */
+    margin: auto;
+    /* background-color: brown; */
+
 }
 
 #back-function {
-    margin-top: 5vh;
+    padding-top: 5vh;
     margin-left: 5vw;
     display: flex;
     flex-direction: column;
@@ -21,11 +27,9 @@
 }
 
 #dish-name-container {
-    /* background-color: red; */
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5vh;
 }
 
 #dish-name {
@@ -38,14 +42,20 @@
 
 #ingredients-container {
     height: 40vh;
-    width: 30vw;
+    width: 45vw;
     /* background-color: blue; */
     margin-left: 5vw;
+    display: flex;
+    justify-content: center;
 }
 
 #directions-container {
     margin-left: 5vw;
+    width: 45vw;
+    display: flex;
+    justify-content: center;
 }
+
 
 
 #sample-image{
@@ -55,17 +65,31 @@ object-fit: scale-down;
 margin-bottom: 10vh;
 }
 
+#image-container{
+    /* background-color: white;
+    width: 80vw; */
+    display: flex;
+    justify-content: center;
+}
+
 #menu-bar{
     /* background-color: green; */
     height: 6vh;
-    width: 10vw;
+    width: 15vw;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     font-size: 4vh;
-    background-color: black;
+    /* background-color: black; */
+    position: relative;
+    top: 2vh;;
+    left: 65vw;
 
+}
 
-    
+#ing-dir-container {
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
 }
