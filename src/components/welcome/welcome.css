@@ -36,8 +36,7 @@ height: 70vh;
     position: absolute;
     top: 5vh;
     right: -50vw;
-    /* overflow: clip;
-    overflow-clip-margin: initial; */
+    z-index: -1;
 }
 
 #old-recipe-left {
@@ -47,6 +46,7 @@ height: 70vh;
     position: absolute;
     top: 1vh;
     left: -50vw;
+    z-index: -1;
 }
 
 html {
