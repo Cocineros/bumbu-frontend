@@ -2,6 +2,7 @@ import 'antd/dist/antd.css';
 import { Input, Space } from 'antd';
 import { AudioOutlined } from '@ant-design/icons';
 import { Layout } from 'antd';
+import Card from '../card/Card'
 import Auth from '../utils/auth';
 import AddRecipeModal from '../addRecipe-modal/AddRecipeModal'
 import {
@@ -46,9 +47,12 @@ export default function Dashboard() {
             <div class="vl"></div>
             <Content>
             <div className="header"><h1>My Recipes</h1></div>
+            <Card />
             </Content>
             </Layout>
+           
             <AddRecipeModal/>
+            
         </div>
             <div>
             <a href="/recipe">click here for recipe card </a>
