@@ -1,30 +1,38 @@
-import './card.css'
+import React from 'react';
+import { useQuery } from '@apollo/client';
+import 'antd/dist/antd.css';
+import { Card } from 'antd';
 
-export default function Card() {
+import { QUERY_ME } from '../utils/queries';
+
+export default function GetSavedRecipes() {
+    const { loading, data } = useQuery(QUERY_ME);
+    console.log("yo this is data",data);
+    
+    // const profileData = data?.savedRecipes || {} ;
+    const profileData = data?.me || {} ;
+
+    if (loading) {
+        return <div>Loading...</div>
+    }
+    console.log("profile stuff", profileData)
     return (
-        <div className="card-container">
-            <h1>card example</h1>
-            <div className="recipe-card">
-                <h2 id="add-recipe">Add a recipe</h2>
-                <br></br>
-                <div className='dish-details'>
-                    <h3>Dish name:</h3>
-                    <input placeholder="Enter dish name here"></input>
-                    <h3>Dish time:</h3>
-                    <input placeholder="Enter time to make dish here"></input>
+        <div>
+            {data.me.savedRecipes.map((recipe) => {
+                return (
+                    <div className="site-card-border-less-wrapper">
+                    <Card key={recipe._id} title={recipe.name} bordered={false} style={{ width: 300 }}>
+                        <p>{recipe.description}</p>
+                     <p>{recipe.instructions}</p>
+                        <p>{recipe.ingredients}</p>
+                    </Card>
                 </div>
-                <br></br>
-                <div className='recipe-detail-container'>
-                    <h3>Ingredients:</h3>
-                    <input placeholder="Enter ingredients here"></input>
-                    <h3>Directions:</h3>
-                    <input placeholder="Enter directions here"></input>
-                    <h3>Upload image:</h3>
-                    <input placeholder="Optional: upload image of dish here"></input>
-                </div>
-                <br></br>
-                <button>add recipe to cookbook</button>
-            </div>
+                )
+            })}
+        
+        
         </div>
     )
+
+
 }
