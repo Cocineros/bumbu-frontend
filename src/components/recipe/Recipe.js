@@ -4,15 +4,14 @@ import { EditOutlined, DeleteOutlined, ShareAltOutlined, RollbackOutlined } from
 import { useState } from 'react'
 
 export default function Recipe() {
-    const [ isActive, setActive ] = useState("false");
-    const ToggleClass = () => {
-        setActive (!isActive);
-    }
+    // const [ isActive, setActive ] = useState("false");
+    // const toggleClass = () => {
+    //     setActive(!isActive);
+    // }
 
     return (
         <>
         <div id="page"> 
-
             <div id="back-function">
                 <a href="/dashboard" id="back-btn">
                 <RollbackOutlined />
@@ -37,15 +36,10 @@ export default function Recipe() {
 
                     <h3> INGREDIENTS </h3>
                     <ul>
-                        <li className={isActive? "ingredient" : "strikethrough"} onClick={ToggleClass}>butter</li>
-                        {/* <li className="ingredient"> eggs </li>
+                        <li className="ingredient">eggs</li>
                         <li className="ingredient"> milk </li>
                         <li className="ingredient"> flour </li>
-                        <li className="ingredient"> sugar </li> */}
-                        <li className={isActive? "ingredient" : "strikethrough"} onClick={ToggleClass}>eggs</li>
-                        <li className={isActive? "ingredient" : "strikethrough"} onClick={ToggleClass}>milk</li>
-                        <li className={isActive? "ingredient" : "strikethrough"} onClick={ToggleClass}>flour</li>
-                        <li className={isActive? "ingredient" : "strikethrough"} onClick={ToggleClass}>sugar</li>
+                        <li className="ingredient"> sugar </li>
                     
                     </ul>
                     </div>
