@@ -65,24 +65,7 @@ export default function Nav(){
                 <img src={Logo} id="bumbu-logo"/>
                 </a>
             </div>
-            <div className="nav-bar">
-            <Link to="/" className="nav-logo"></Link>
-			<div onClick={handleClick} className="nav-icon">
-				{open ? <FiX /> : <FiMenu />}
-			</div>
-			<ul className={open ? 'nav-links active' : 'nav-links'}>
-				<li className="nav-item">
-					<Link to="/dashboard" className="nav-link" onClick={closeMenu}>
-						Signup
-					</Link>
-				</li>
-				<li className="nav-item">
-					<Link to="/" className="nav-link" onClick={closeMenu} onClick={logout} >
-						Login
-					</Link>
-				</li>
-			</ul>
-            </div>
+            
             </>
         )}
         </nav>

@@ -35,6 +35,10 @@ button {
     display:block;
 }
 
-/* .nav-link {
+/* #signup-btn-nav {
+    display: none;
+}
+
+#login-btn-nav {
     display: none;
 } */
