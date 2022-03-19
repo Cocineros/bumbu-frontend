@@ -25,7 +25,7 @@ export default function Testimonial() {
                 </div>
                 <div className="card">
                     <img src="https://avatars.githubusercontent.com/u/56140478?s=96&v=4"></img>
-                    <h2>"An online database of all my recipes is perfect since I tend to sometimes lose my notes that are saved on paper."</h2>
+                    <h2>"An online database of all my recipes is perfect since I tend to sometimes lose my recipes that are saved on paper."</h2>
                     <h2>- Brian</h2>
                 </div>
                 <div className="card">
@@ -36,7 +36,7 @@ export default function Testimonial() {
                 <div className="card">
                     <img src="https://avatars.githubusercontent.com/u/89612152?s=80&v=4"></img>
                     <h2 id="test2text">"I wanted to have access to all my recipes, so I can use them whether I am traveling or at home."</h2>
-                    <h2>- Ayese</h2>
+                    <h2>- Ayse</h2>
                 </div>
             </div>
         </>
