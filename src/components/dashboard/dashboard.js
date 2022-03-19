@@ -49,9 +49,9 @@ export default function Dashboard() {
             <img src={MyRecipes} id="my-recipes-header" />
             </div>
             <div id="recipes-container">
-            <a href="/recipe">click here for recipe card </a>
-            </div>
+            {/* <a href="/recipe">click here for recipe card </a> */}
             <Card />
+            </div>
             </Content>
             </Layout>
            
