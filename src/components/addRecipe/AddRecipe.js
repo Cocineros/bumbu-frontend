@@ -22,7 +22,7 @@ export default function MakeRecipe() {
     setAddRecipe({
       ...addRecipe,
       [name]: value,
-    });
+    });    
   };
 
   // submit form

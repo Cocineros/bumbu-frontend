@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useQuery, useMutation } from '@apollo/client';
 import 'antd/dist/antd.css';
 import { Card } from 'antd';
@@ -29,10 +29,15 @@ export default function GetSavedRecipes() {
                 variables: { id }
             })
             console.log("this is the id", id)
+            window.location.reload();
         } catch (err) {
             console.log(JSON.stringify(err, null, 2))
         }
     }
+
+    // useEffect(() => {
+    //     window.location.reload()
+    // })
 
     return (
         <div>
@@ -40,15 +45,15 @@ export default function GetSavedRecipes() {
                 console.log("recipe id", recipe)
                 return (
                     <div className="site-card-border-less-wrapper">
-                        <a href="/recipe">
+                        {/* <a href="/recipe"> */}
                         <Card key={recipe._id} 
                         hoverable
-    style={{ width: 240 }}
-    cover={<img alt="example" src={SampleRecipe} />}>
-                            <Meta title={recipe.name} description={recipe.description} ingredients={recipe.ingredients} />
-                            <button className="delete-btn" style={{ cursor: "pointer" }} onClick={() => handleRemoveRecipe(recipe._id)}><h3><DeleteOutlined />&nbsp; Delete Recipe</h3></button>
+                        style={{ width: 240 }}
+                        cover={<img alt="example" src={SampleRecipe} />}>
+                        <Meta title={recipe.name} description={recipe.description} ingredients={recipe.ingredients} />
+                        <button className="delete-btn" style={{ cursor: "pointer" }} onClick={() => handleRemoveRecipe(recipe._id)}><h3><DeleteOutlined />&nbsp; Delete Recipe</h3></button>
                         </Card>
-                        </a>
+                        {/* </a> */}
                     </div>
                 )
             })}
