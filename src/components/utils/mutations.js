@@ -44,16 +44,17 @@ mutation removeProfile {
 `;
 
 export const ADD_RECIPE = gql`
-  mutation addRecipe($name: String!, $ingredients: String!, $instructions: String!, $description: String!) {
-    addRecipe(name: $name) {
-      _id
-      name
-      description
-      ingredients
-      instructions
-    }
+mutation Mutation($name: String!, $description: String!, $ingredients: [String]!, $instructions: String!) {
+  addRecipe(name: $name, description: $description, ingredients: $ingredients, instructions: $instructions) {
+    _id
+    name
+    description
+    ingredients
+    instructions
   }
+}
 `;
+
 
 export const REMOVE_RECIPE = gql`
   mutation removeRecipe($id: String!) {

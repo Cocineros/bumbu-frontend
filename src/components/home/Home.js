@@ -1,6 +1,5 @@
 import Welcome from '../welcome/Welcome'
 import SignupModal from '../signup-modal/SignupModal'
-import Card from '../card/Card'
 import Testimonial from '../testimonal/Testimonial'
 import About from '../about/About'
 import Footer from '../footer/Footer'
@@ -34,7 +33,6 @@ export default function Home() {
                 <Welcome />
                 
               <About />
-              <Card />
               <Testimonial />
               <Footer />
               <BackTop />
@@ -57,7 +55,6 @@ export default function Home() {
         <LoginModal />
         </div>
         <About/>
-        <Card/>
         <Testimonial/>
         <Footer/> 
         <BackTop />
