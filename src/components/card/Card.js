@@ -5,6 +5,9 @@ import { Card } from 'antd';
 import { DeleteOutlined } from '@ant-design/icons';
 import { QUERY_ME } from '../utils/queries';
 import { REMOVE_RECIPE } from '../utils/mutations';
+import SampleRecipe from '../../assets/sample-recipe-image.JPG'
+
+const {Meta} = Card;
 // import Auth from '../utils/auth';
 
 export default function GetSavedRecipes() {
@@ -37,12 +40,15 @@ export default function GetSavedRecipes() {
                 console.log("recipe id", recipe)
                 return (
                     <div className="site-card-border-less-wrapper">
-                        <Card key={recipe._id} title={recipe.name} bordered={true} style={{ width: 300 }}>
-                            <p>{recipe.description}</p>
-                            <p>{recipe.instructions}</p>
-                            <p>{recipe.ingredients}</p>
+                        <a href="/recipe">
+                        <Card key={recipe._id} 
+                        hoverable
+    style={{ width: 240 }}
+    cover={<img alt="example" src={SampleRecipe} />}>
+                            <Meta title={recipe.name} description={recipe.description} ingredients={recipe.ingredients} />
                             <button className="delete-btn" style={{ cursor: "pointer" }} onClick={() => handleRemoveRecipe(recipe._id)}><h3><DeleteOutlined />&nbsp; Delete Recipe</h3></button>
                         </Card>
+                        </a>
                     </div>
                 )
             })}

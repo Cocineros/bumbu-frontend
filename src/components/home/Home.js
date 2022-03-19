@@ -29,7 +29,7 @@ export default function Home() {
               <button className="btn btn-lg btn-light m-2" onClick={logout}>
                 Logout
               </button> */}
-          <div class="home components">
+          <div className="home-components">
             <Welcome />
             <About />
             <Testimonial />
@@ -40,7 +40,7 @@ export default function Home() {
         </>
       ) : (
         <>
-          <div class="home-components">
+          <div className="home-components">
             <Welcome />
 
             <div id="buttons-container">
