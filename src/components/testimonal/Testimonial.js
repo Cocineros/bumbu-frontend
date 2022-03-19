@@ -16,22 +16,27 @@ export default function Testimonial() {
                     <img src="https://avatars.githubusercontent.com/u/90944910?s=96&v=4"></img>
 
                     <h2>"I wanted an app that kept all my recipes for me so I can easily share them with friends and family."</h2>
+                    <h2>- Amadea</h2>
                 </div>
                 <div className="card">
                     <img src="https://avatars.githubusercontent.com/u/73203546?v=4"></img>
                     <h2>"I wanted something that would organize my recipes."</h2>
+                    <h2>- Janette</h2>
                 </div>
                 <div className="card">
                     <img src="https://avatars.githubusercontent.com/u/56140478?s=96&v=4"></img>
-                    <h2>"I wanted all my recipes to look nice with minimal effort."</h2>
+                    <h2>"An online database of all my recipes is perfect since I tend to sometimes lose my notes that are saved on paper."</h2>
+                    <h2>- Brian</h2>
                 </div>
                 <div className="card">
                     <img src="https://avatars.githubusercontent.com/u/88861538?s=60&v=4"></img>
                     <h2>"I wanted to be able to save all my vegan recipes since good ones are hard to come by."</h2>
+                    <h2>- Josshy</h2>
                 </div>
                 <div className="card">
                     <img src="https://avatars.githubusercontent.com/u/89612152?s=80&v=4"></img>
                     <h2 id="test2text">"I wanted to have access to all my recipes, so I can use them whether I am traveling or at home."</h2>
+                    <h2>- Ayese</h2>
                 </div>
             </div>
         </>
