@@ -7,11 +7,14 @@ nav {
     justify-content: space-between;
 }
 
-.button {
+.nav-btn {
+    margin-right: 2rem;
+}
+
+.btns {
     background-color: rgb(253, 253, 253);
     color: rgb(172, 99, 99);
-    text-decoration: none;
-    margin: 4rem;
+    margin: 1rem;
     font-size: 20px;
     border: 2px solid rgb(199, 149, 149); 
     border-radius: 6px;
@@ -36,4 +39,3 @@ nav {
     /* margin-top: 0; */
     margin-left: -6em;
 }
-
