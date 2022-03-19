@@ -90,7 +90,8 @@ margin-bottom: 10vh;
 
 }
 
-.strikethrough {
-    list-style-type: circle;
+.ingredient:hover{
     text-decoration: line-through;
+    list-style-type: circle;
 }
+
