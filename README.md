@@ -24,6 +24,8 @@ WHEN I click "add recipe" button
 THEN I will be directed to a page on which I will input recipe name, time, ingredients, directions and description fields
 WHEN I click submit button
 THEN the recipe will be saved to my recipe cards
+WHEN I am logged in if I click the bumbu icon
+THEN I will be redirected to the homepage
 
 ```
 
