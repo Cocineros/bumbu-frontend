@@ -35,3 +35,6 @@ button {
     display:block;
 }
 
+.nav-link {
+    display: none;
+}
