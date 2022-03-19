@@ -27,7 +27,7 @@ export default function Nav(){
             <div>
             <Link className="btn btn-lg btn-primary m-2" to="/dashboard"> View My Profile
               </Link> 
-              <button className="btn btn-lg btn-light m-2" onClick={logout}>
+              <button className="btn btn-lg btn-light m-2" onClick={logout} style= {{ cursor: "pointer" }}>
                 Logout
               </button>
             </div>

@@ -40,7 +40,7 @@ export default function Dashboard() {
             <div class="dash-nav">
             <a href="/addRecipe"><h3><PlusSquareFilled className="btn" />&nbsp; Add a Recipe</h3></a>
             <br/>
-            <button onClick={logout}><h3><LoginOutlined className="btn" />&nbsp; Logout</h3></button>
+            <button onClick={logout} style= {{ cursor: "pointer" }}><h3><LoginOutlined className="btn" />&nbsp; Logout</h3></button>
             </div>
             </Sider>
             <div class="vl"></div>
