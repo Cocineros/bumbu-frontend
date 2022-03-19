@@ -68,7 +68,7 @@ export default function MakeRecipe() {
               onChange={handleChange}
             />
 
-            <input placeholder="description"
+            <input placeholder="Description"
               type="text"
               name="description"
               id="description"
@@ -77,7 +77,7 @@ export default function MakeRecipe() {
               onChange={handleChange}
             />
 
-            <input placeholder="ingredients"
+            <input placeholder="Ingredients"
               type="text"
               name="ingredients"
               id="ingredients"
@@ -86,7 +86,7 @@ export default function MakeRecipe() {
               onChange={handleChange}
             />
 
-            <input placeholder="instructions"
+            <input placeholder="Instructions"
               type="text"
               name="instructions"
               id="instructions"

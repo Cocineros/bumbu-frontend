@@ -10,6 +10,7 @@ import {
     LoginOutlined
   } from '@ant-design/icons';
 import './dashboard.css'
+import MyRecipes from '../../assets/my-recipes.png'
 
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -38,25 +39,24 @@ export default function Dashboard() {
             <Space direction="vertical">
                 <Search className="search" placeholder="search for recipe" onSearch={onSearch} style={{ width: 200 }} />
             </Space>
-            <div class="dash-nav">
-            <a href="/addRecipe"><h3><PlusSquareFilled className="btn" />&nbsp; Add a Recipe</h3></a>
-            <br/>
-            <button onClick={logout} style= {{ cursor: "pointer" }}><h3><LoginOutlined className="btn" />&nbsp; Logout</h3></button>
+            <div class="dash-nav">     
+            <AddRecipeModal/>
             </div>
             </Sider>
             <div class="vl"></div>
             <Content>
-            <div className="header"><h1>My Recipes</h1></div>
+            <div className="header">
+            <img src={MyRecipes} id="my-recipes-header" />
+            </div>
+            <div id="recipes-container">
+            <a href="/recipe">click here for recipe card </a>
+            </div>
             <Card />
             </Content>
             </Layout>
            
-            <AddRecipeModal/>
             
         </div>
-            <div>
-            <a href="/recipe">click here for recipe card </a>
-            </div>
         </>
     )
 }
