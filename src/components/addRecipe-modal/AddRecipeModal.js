@@ -6,6 +6,7 @@ import { Modal, Button } from 'antd';
 // import './signupModal.css'
 
 import AddRecipe from '../addRecipe/AddRecipe'
+import {PlusSquareFilled} from '@ant-design/icons';
 
 export default function SignupModal() {
   const [isModalVisitble, setIsModalVisible] = useState(false);
@@ -23,11 +24,11 @@ export default function SignupModal() {
   };
   return (
     <>
-      <div className="landing-container">
-        <Button className="buttons" id="signup-btn" onClick={showModal}>
-          Add Recipe       </Button>
+      <div className="modal-container">
+        <Button className="buttons" id="add-recipe-btn" onClick={showModal}>
+          <PlusSquareFilled /> Add Recipe</Button>
         <Modal
-          title="Create a new account"
+          title="Add a recipe"
           visible={isModalVisitble}
           onOk={handleOk}
           onCancel={handleCancel}
