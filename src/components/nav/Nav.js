@@ -1,12 +1,24 @@
 import { NavLink } from 'react-router-dom';
 import './nav.css'
+import { useState } from "react";
 // import BumbuName from '../../assets/bumbu-name.png'
 import Logo from '../../assets/bumbu-logo-artwork.png'
+import { FiMenu, FiX } from 'react-icons/fi';
 import Auth from '../utils/auth';
 import { Link } from 'react-router-dom'
 
 
 export default function Nav(){
+    const [open, setOpen] = useState(false);
+
+	const handleClick = () => {
+		setOpen(!open);
+	};
+
+	const closeMenu = () => {
+		setOpen(false);
+	};
+
     const logout = (event) => {
         event.preventDefault();
         Auth.logout();
@@ -24,12 +36,23 @@ export default function Nav(){
                 <img src={Logo} id="bumbu-logo"/>
                 </a>
             </div>
-            <div className="nav-btn">
-            <Link className="btns" to="/dashboard"> View My Profile
-              </Link> 
-              <Link className="btns"to="/dashboard" onClick={logout}>
-                Logout
-              </Link>
+            <div className="nav-bar">
+            <Link to="/" className="nav-logo"></Link>
+			<div onClick={handleClick} className="nav-icon">
+				{open ? <FiX /> : <FiMenu />}
+			</div>
+			<ul className={open ? 'nav-links active' : 'nav-links'}>
+				<li className="nav-item">
+					<Link to="/dashboard" className="nav-link" onClick={closeMenu}>
+						View My Profile
+					</Link>
+				</li>
+				<li className="nav-item">
+					<Link to="/" className="nav-link" onClick={closeMenu} onClick={logout} >
+						Logout
+					</Link>
+				</li>
+			</ul>
             </div>
             </>
         ):(
@@ -41,6 +64,24 @@ export default function Nav(){
                 <a href="/">
                 <img src={Logo} id="bumbu-logo"/>
                 </a>
+            </div>
+            <div className="nav-bar">
+            <Link to="/" className="nav-logo"></Link>
+			<div onClick={handleClick} className="nav-icon">
+				{open ? <FiX /> : <FiMenu />}
+			</div>
+			<ul className={open ? 'nav-links active' : 'nav-links'}>
+				<li className="nav-item">
+					<Link to="/dashboard" className="nav-link" onClick={closeMenu}>
+						Signup
+					</Link>
+				</li>
+				<li className="nav-item">
+					<Link to="/" className="nav-link" onClick={closeMenu} onClick={logout} >
+						Login
+					</Link>
+				</li>
+			</ul>
             </div>
             </>
         )}

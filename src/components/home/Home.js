@@ -52,7 +52,7 @@ export default function Home() {
 
             </div>
         <SignupModal/>
-        <LoginModal />
+        <LoginModal/>
         </div>
         <About/>
         <Testimonial/>
