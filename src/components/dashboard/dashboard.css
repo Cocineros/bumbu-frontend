@@ -24,10 +24,6 @@
     margin-bottom: 2rem;
 }
 
-.btn {
-    font-size: x-large;
-}
-
 .vl {
     border-left: 2px solid rgb(221, 221, 221);
     height: 100vh;
@@ -36,3 +32,33 @@
     margin-left: -3px;
     top: 150px;
   }
+
+  .delete-btn {
+    position: absolute;
+    bottom: 5%;
+    left: 5rem;
+    width: 10rem;
+}
+
+.deletepro-container {
+    display: flex;
+    flex-direction: column;
+    width: 8rem;
+    text-align: center;
+    padding: .5rem;
+    /* border: 2px solid;
+    border-radius: 25%; */
+    position: absolute;
+    bottom: 15%;
+    left: 6rem;
+    z-index: 1;
+}
+
+.deletepro-header {
+    text-decoration: overline;
+}
+
+.deletepro-btn-yes:hover {
+    background-color: red;
+}
+
