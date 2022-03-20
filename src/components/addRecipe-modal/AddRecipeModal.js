@@ -8,7 +8,7 @@ import { Modal, Button } from 'antd';
 import AddRecipe from '../addRecipe/AddRecipe'
 import {PlusSquareFilled} from '@ant-design/icons';
 
-export default function SignupModal() {
+export default function AddRecipeModal() {
   const [isModalVisitble, setIsModalVisible] = useState(false);
 
   const showModal = () => {
