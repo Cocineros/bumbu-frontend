@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import './signupModal.css'
 import { Modal, Button } from 'antd';
-// import { NavLink } from 'react-router-dom'
 import Signup from '../signup/Signup';
 
 export default function SignupModal() {

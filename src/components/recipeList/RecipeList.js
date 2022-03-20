@@ -7,37 +7,21 @@ import { DeleteOutlined } from '@ant-design/icons';
 
 import { Card } from 'antd';
 import SampleRecipe from '../../assets/sample-recipe-image.JPG'
+import './recipelist.css'
 
 const {Meta} = Card;
 
 
 export default function RecipeList(props) {
-
-    // const recipeCard = <Card />    
-    
-    // const filteredData = data.filter((el) => {
-    //     if (props.input === '') {
-    //         return el;
-    //     } else {
-    //         return el.text.toLowerCase().includes(props.input)
-    //     }
-    // })
-    // return (
-    //     <ul>
-    //         {filteredData.map((item) => (
-    //             <li key={item.id}>{item.text}</li>
-    //         ))}
-    //     </ul>
-    // )
-
+    const [showModal, setShowModal] = useState(false);
     const [removeRecipe] = useMutation(REMOVE_RECIPE);
     const { loading, data } = useQuery(QUERY_ME);
-    // const recipeData = data?.me || {};
 
     if (loading) {
         return <div>Loading...</div>
     }
     console.log(data, "data")
+
 
     const handleRemoveRecipe = async (id) => {
         try {
@@ -51,8 +35,9 @@ export default function RecipeList(props) {
         }
     }
 
+    
     const filteredData = data.me.savedRecipes.filter((el) => {
-        console.log("EL", el)
+        // console.log("EL", el)
         // console.log('el name', el.name)
         
         if (props.input === '') {
@@ -62,8 +47,26 @@ export default function RecipeList(props) {
         }
     })
 
+    console.log(data, "line 50 data")
+    console.log(data.me.savedRecipes[0]._id)
+
+    const renderModal = (data) => {
+        if(showModal) {
+            return (
+                <div className='del-recipe-container'>
+                    <h4 className='del-recipe-header'>Are you sure?</h4>
+                    <button className='del-recipe-btn-yes' style= {{ cursor: "pointer" }} onClick={() => handleRemoveRecipe()}>Yes</button>
+                    <button style= {{ cursor: "pointer" }} onClick={() => setShowModal(false)}>No</button>
+                </div>
+            )
+        } else {
+            return;
+        }
+    }
+
     return (
         <div>
+            {renderModal()}
             {filteredData.map((recipe) => (
                 // <li key={recipe.id}> {recipe.name} </li>
                 <li className="site-card-border-less-wrapper">
@@ -72,8 +75,13 @@ export default function RecipeList(props) {
                         hoverable
                         style={{ width: 240 }}
                         cover={<img alt="example" src={SampleRecipe} />}>
-                        <Meta title={recipe.name} description={recipe.description} ingredients={recipe.ingredients} />
-                        <button className="delete-btn" style={{ cursor: "pointer" }} onClick={() => handleRemoveRecipe(recipe._id)}><h3><DeleteOutlined />&nbsp; Delete Recipe</h3></button>
+                        <Meta title={recipe.name} description={recipe.description, recipe.ingredients, recipe.instructions} />
+
+                        <button className="delete-btn" style={{ cursor: "pointer" }} onClick={() => 
+                            setShowModal(true)}
+                            // handleRemoveRecipe(recipe._id)}
+                            >
+                            <h3><DeleteOutlined />&nbsp; Delete Recipe</h3></button>
                         </Card>
                         {/* </a> */}
                     </li>

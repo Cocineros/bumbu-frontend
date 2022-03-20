@@ -28,7 +28,7 @@ export default function Signup() {
     });
   };
 
-  // submit form
+
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 

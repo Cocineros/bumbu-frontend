@@ -12,10 +12,6 @@ export default function Welcome() {
                     <img id="home-logo" src={LogoArtwork} alt="bumbu homepage logo" />
                 </div>
                 <div id="welcome-text-container">
-                    {/* <div id="phonetics-container"> 
-                    <p>/boom • boo/</p>
-                    <p>the Indonesian word for spice</p>
-                    </div> */}
                     <div className='welcome-text'>
                     <p><strong>/boom • boo/</strong></p>
                     <p>the Indonesian word for spice</p>
@@ -23,7 +19,6 @@ export default function Welcome() {
                     <div className='text'>
                     <p>Write and save your favorite recipes right here and access them from anywhere in the world!</p>
                     </div>
-                    {/* <p className="welcome-text" id="text-line-two">and access them from anywhere in the world!</p> */}
                 </div>
                 <div id="image-margins">
                 <img src={OldRecipe} id="old-recipe-left" />

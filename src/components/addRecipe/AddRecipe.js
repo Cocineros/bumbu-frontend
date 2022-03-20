@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom'
 import { useMutation } from '@apollo/client'
 import { ADD_RECIPE } from '../utils/mutations'
 
-import Auth from '../utils/auth'
-
 export default function MakeRecipe() {
   const [addRecipe, setAddRecipe] = useState({
     name: '',
@@ -24,8 +22,6 @@ export default function MakeRecipe() {
       [name]: value,
     });    
   };
-
-  // submit form
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
