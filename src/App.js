@@ -11,7 +11,6 @@ import Nav from './components/nav/Nav'
 import Home from './components/home/Home';
 import Login from './components/login/Login';
 import Signup from './components/signup/Signup';
-// import Markdown from './components/markdown/Markdown';
 
 import 'antd/dist/antd.css';
 import Dashboard from './components/dashboard/dashboard';
@@ -39,7 +38,6 @@ const client = new ApolloClient({
 });
 
 function App() {
-  console.log("markdown", typeof Markdown)
 
   return (
     <ApolloProvider client={client}>
@@ -52,7 +50,6 @@ function App() {
           <Route path='/dashboard' element={ <Dashboard />} />
           <Route path='/recipe' element={ <Recipe />} />
         </Routes>
-        {/* <Markdown /> */}
       </>
       </ApolloProvider>
   );

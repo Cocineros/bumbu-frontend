@@ -62,7 +62,7 @@ export default function Dashboard() {
             return;
         }
     }
-//search bar inputhandler
+
     const [inputText, setInputText] = useState("");
     let inputHandler = (e) => {
       var lowerCase = e.target.value.toLowerCase();
@@ -76,7 +76,6 @@ export default function Dashboard() {
             <Layout className ="layout">
             <Sider className="sidebar">
             <Space direction="vertical">
-                {/* <Search className="search" placeholder="search for recipe" onSearch={onSearch} style={{ width: 200 }} /> */}
                 <TextField
                 id="outlined-basic"
                 onChange={inputHandler}
@@ -85,23 +84,23 @@ export default function Dashboard() {
                 label="Search"
         />
             </Space>
-            <div class="dash-nav">     
+            <div className="dash-nav">     
             <AddRecipeModal/>
             </div>
             </Sider>
-            <div class="vl"></div>
+            <div className="vl"></div>
             <button className="delete-btn" style= {{ cursor: "pointer" }} onClick={() => setShowModal(true)}><h3><UserDeleteOutlined />&nbsp; Delete Profile</h3></button>
             <Content>
             <div className="header">
             <img src={MyRecipes} id="my-recipes-header" />
             </div>
             <div id="recipes-container">
+
             {/* <a href="/recipe">click here for recipe card </a> */}
             </div>
 
             <RecipeList input={inputText} /> 
             </Content>
-            <Card input={inputText}/>
             </Layout>
            
             

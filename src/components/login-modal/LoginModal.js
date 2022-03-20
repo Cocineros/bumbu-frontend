@@ -37,9 +37,6 @@ export default function LoginModal(){
           >
           <Login />
         </Modal>
-                {/* <NavLink className="button" to="/signup">Signup</NavLink>
-                <NavLink className="button" to="/login">Login</NavLink> */}
-            {/* </div> */}
         </div>
         </>
     )
