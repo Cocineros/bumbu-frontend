@@ -3,6 +3,9 @@
     background-color: #cead83; 
     padding: .5rem;
     bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer-container a {
@@ -15,6 +18,8 @@
     margin-bottom: 0;
     margin-top: 10px;
     color: black;
+    font-family: 'Cormorant Garamond', serif;
+    margin-right: 2vw;
 }
 
 .footer-container p {

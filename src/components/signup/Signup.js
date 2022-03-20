@@ -3,6 +3,7 @@ import './signup.css'
 import { Link } from 'react-router-dom'
 import { useMutation } from '@apollo/client'
 import { ADD_PROFILE } from '../utils/mutations'
+import LoginModal from '../login-modal/LoginModal'
 
 import Auth from '../utils/auth'
 
@@ -50,7 +51,6 @@ export default function Signup() {
     })
   };
 
-
   return (
     <>
       <div>
@@ -61,7 +61,8 @@ export default function Signup() {
           </p>
         ) : (
           <form className="signup-form " onSubmit={handleFormSubmit}>
-            <input placeholder="First Name"
+            <input className="input-fn-ln input"
+            placeholder="First Name"
               type="text"
               name="firstName"
               id="fname"
@@ -70,7 +71,9 @@ export default function Signup() {
               onChange={handleChange}
             />
 
-            <input placeholder="Last Name"
+            <input 
+            className="input-fn-ln input"
+            placeholder="Last Name"
               type="text"
               name="lastName"
               id="lname"
@@ -79,7 +82,9 @@ export default function Signup() {
               onChange={handleChange}
             />
 
-            <input placeholder="Username"
+            <input 
+            className="input"
+            placeholder="Username"
               type="username"
               name="username"
               id="username"
@@ -88,7 +93,9 @@ export default function Signup() {
               onChange={handleChange}
             />
 
-            <input placeholder="Email"
+            <input 
+            className="input"
+            placeholder="Email"
               type="email"
               name="email"
               id="email"
@@ -97,7 +104,9 @@ export default function Signup() {
               onChange={handleChange}
             />
 
-            <input placeholder="Password"
+            <input 
+            className="input"
+            placeholder="Password"
               type="password"
               name="password"
               id="password"
@@ -106,7 +115,9 @@ export default function Signup() {
               onChange={handleChange}
             />
 
-            <input placeholder="Confirm Password"
+            <input 
+            className="input"
+            placeholder="Confirm Password"
               type="password"
               name="confirmPassword"
               id="confirm-password"
@@ -114,10 +125,9 @@ export default function Signup() {
               onChange={handleChange}
             />
 
-            <button type="submit">Submit</button>
+            <button type="submit">Signup</button>
           </form>
         )}
-        <h3>Already have an account? <a href="/login">Log in</a></h3>
       </div>
     </>
   )

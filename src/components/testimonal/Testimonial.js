@@ -8,14 +8,14 @@ export default function Testimonial() {
     return (
         <>
             <div className="section-title">
-                <h1>user stories</h1>
+                <h1>From the creators of Bumbu</h1>
             </div>
             <div className="container">
                 {/* <div className="left-column"> */}
                 <div className="card">
                     <img src="https://avatars.githubusercontent.com/u/90944910?s=96&v=4"></img>
 
-                    <h2>"I wanted an app that kept all my recipes for me so I can easily share them with friends and family."</h2>
+                    <h2>"I wanted an app that kept all my recipes for me so I can easily find them and share them with friends and family."</h2>
                     <h2>- Amadea</h2>
                 </div>
                 <div className="card">

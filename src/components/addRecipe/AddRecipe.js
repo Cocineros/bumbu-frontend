@@ -52,14 +52,10 @@ export default function MakeRecipe() {
   return (
     <>
       <div>
-        {data ? (
-          <p>
-            Success! You may now head{' '}
-            <Link to="/">back to the homepage.</Link>
-          </p>
-        ) : (
+        {data ? window.location.reload() : (
           <form className="signup-form " onSubmit={handleFormSubmit}>
-            <input placeholder="Recipe Name"
+            <input className="input"
+            placeholder="Recipe Name"
               type="text"
               name="name"
               id="name"
@@ -68,7 +64,9 @@ export default function MakeRecipe() {
               onChange={handleChange}
             />
 
-            <input placeholder="Description"
+            <input 
+            className="input"
+            placeholder="Description"
               type="text"
               name="description"
               id="description"
@@ -77,7 +75,9 @@ export default function MakeRecipe() {
               onChange={handleChange}
             />
 
-            <input placeholder="Ingredients"
+            <input 
+            className="input"
+            placeholder="Ingredients"
               type="text"
               name="ingredients"
               id="ingredients"
@@ -86,7 +86,9 @@ export default function MakeRecipe() {
               onChange={handleChange}
             />
 
-            <input placeholder="Instructions"
+            <input 
+            className="input"
+            placeholder="Instructions"
               type="text"
               name="instructions"
               id="instructions"
@@ -94,7 +96,7 @@ export default function MakeRecipe() {
               value={addRecipe.instructions}
               onChange={handleChange}
             />
-            <button type="submit">Submit</button>
+            <button type="submit">Add Recipe</button>
           </form>
         )}
       </div>

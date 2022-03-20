@@ -47,9 +47,12 @@ export default function Login() {
                 Success! You may now head to the dashboard.
             </p>
             ) : (
+                <div id="login-form-container">
+
                 <form className="login-form" onSubmit={handleFormSubmit}>
 
                     <input 
+                    className="input"
                     placeholder="Email" 
                     name="email" type="email"
                     id="email" 
@@ -58,7 +61,8 @@ export default function Login() {
 
 
                     <input 
-                    placeholder="*******" 
+                    className="input"
+                    placeholder="Password" 
                     name="password" 
                     type="password" 
                     id="password" 
@@ -66,17 +70,16 @@ export default function Login() {
                     onChange={handleChange} />
 
                     <button
-                    className="btn btn-block btn-info"
+                    className="btn"
                     style={{ cursor: 'pointer' }}
                     type="submit"
                     >
-                    Submit
+                    Login
                     </button>
 
                 </form>
+            </div>
             )}
-
-            <h3>Don't have an account? <a href="/signup">Sign up</a></h3>
-        </>
+            </>
     )
 }
