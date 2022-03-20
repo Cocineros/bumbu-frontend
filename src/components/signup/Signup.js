@@ -53,7 +53,7 @@ export default function Signup() {
 
   return (
     <>
-      <div>
+      <div className='modal'>
         {data ? (
           <p>
             Success! You may now head{' '}
@@ -125,7 +125,11 @@ export default function Signup() {
               onChange={handleChange}
             />
 
-            <button type="submit">Signup</button>
+            <button
+                    className="btn"
+                    style={{ cursor: 'pointer' }}
+                    type="submit"
+                    >Signup</button>
           </form>
         )}
       </div>

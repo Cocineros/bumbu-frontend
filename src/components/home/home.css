@@ -2,9 +2,8 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-
 }
-
+/* 
 #buttons-container {
     height: 10vw;
     display: flex;
@@ -16,7 +15,7 @@
     text-align: center;
     height: 5vw;
 
-}
+} */
 
 /*
 h1 {
@@ -41,8 +40,11 @@ h1 {
 } */
 
 .home-components {
-    background-color: #f6f6e9;
-    margin-bottom: 5vh;
+    background-color: rgb(246, 246, 233);
+    margin-bottom: 5vw;
+}
+.arrow {
+    font-size: 6vh;
 }
 
 /* #buttons-container {
