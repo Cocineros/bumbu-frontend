@@ -21,17 +21,20 @@ export default function LoginModal(){
 
     return (
       <>
-        <div className="container">
+        <div className="landing-container">
             <Button id="login-btn" onClick={showModal}>
-          Login
+         Login
         </Button>
         <Modal
-          title="Login to Bumbu"
-          visible={isModalVisitble}
-          onOk={handleOk}
-          onCancel={handleCancel}
-          footer={[]}
-            >
+            size="lg"
+            aria-labelledby="contained-modal-title-vcenter"
+            centered
+            title="Login to Bumbu"
+            visible={isModalVisitble}
+            onOk={handleOk}
+            onCancel={handleCancel}
+            footer={[]}
+          >
           <Login />
         </Modal>
                 {/* <NavLink className="button" to="/signup">Signup</NavLink>

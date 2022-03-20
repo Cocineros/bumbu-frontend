@@ -11,7 +11,7 @@ export default function Testimonial() {
                 <h1>From the creators of Bumbu</h1>
             </div>
             <div className="container">
-                {/* <div className="left-column"> */}
+                
                 <div className="card">
                     <img src="https://avatars.githubusercontent.com/u/90944910?s=96&v=4"></img>
 

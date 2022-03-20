@@ -1,0 +1,13 @@
+
+#add-recipe-btn{
+    background-color: #f3dcbe; 
+    height: 5vh;
+    width: auto;
+    position: relative;
+    top: -5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: solid 1px #8a755a;
+}

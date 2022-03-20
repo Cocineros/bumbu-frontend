@@ -2,30 +2,11 @@
     display: inline;
     position: absolute;
     bottom: 4rem;
-} 
+}  */
 
-#login-btn{
-    background-color: rgb(253, 253, 253);
-    text-decoration: none;
-    font-size: 20px;
-    border-radius: 6px;
-} */
 
-/* .landing-container {
-    display: flex;
-    justify-content: center;
-    height: 100vh;
 
-}
-
-#signup-btn{
-    position: absolute;
-    margin-left: 50vw;
-    margin-right: 50vw;
-    bottom: 4rem;
-}
-
-.button {
+/* .button {
     background-color: rgb(253, 253, 253);
     color: rgb(172, 99, 99);
     text-decoration: none;
@@ -40,11 +21,22 @@
     background-color:rgb(199, 149, 149);
     border-radius: 6px;
 
-} */
+}  */
 
 #login-btn {
-    position: absolute;
-    bottom: 3vh;
-    right: 40vw;
-    width: 7vw;
+    background-color: rgb(253, 253, 253);
+    color: rgb(168, 133, 87);
+    margin-right: 2rem;    
+    font-size: 20px;
+    border: 2px solid rgb(168, 133, 87); 
+    border-radius: 6px;
+    padding: 5px 22px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    float: right;
+    height: 37px;
+    align-items: center;
+    justify-content: center;
 }
+

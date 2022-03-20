@@ -5,7 +5,9 @@ import About from '../about/About'
 import Footer from '../footer/Footer'
 import LoginModal from '../login-modal/LoginModal'
 import { Link } from 'react-router-dom'
-
+import {
+  DownCircleOutlined
+} from '@ant-design/icons';
 import './home.css'
 // import LogoArtwork from '../../assets/logo-artwork.svg'
 import { BackTop } from 'antd';
@@ -31,7 +33,7 @@ export default function Home() {
               </button> */}
           <div className="home-components">
             <Welcome />
-            <About />
+            <DownCircleOutlined />
             <Testimonial />
             <Footer />
             <BackTop />
@@ -43,11 +45,11 @@ export default function Home() {
           <div className="home-components">
             <Welcome />
 
-            <div id="buttons-container">
-              <SignupModal />
-              <LoginModal />
-            </div>
-            <About />
+            {/* <div id="buttons-container">
+              {/* <SignupModal />
+              <LoginModal /> */} 
+            {/* </div> */}
+            <DownCircleOutlined className='arrow' />
             <Testimonial />
             <Footer />
             <BackTop />

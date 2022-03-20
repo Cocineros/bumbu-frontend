@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
+import './signupModal.css'
 import { Modal, Button } from 'antd';
 // import { NavLink } from 'react-router-dom'
-import './signupModal.css'
 import Signup from '../signup/Signup';
 
 export default function SignupModal() {
@@ -21,14 +21,17 @@ export default function SignupModal() {
   return (
     <>
       <div className="landing-container">
-        <Button className="buttons" id="signup-btn" onClick={showModal}>
-          Sign up        </Button>
-        <Modal
+        <Button id="signup-btn" onClick={showModal}>
+          Signup    </Button>
+        <Modal 
+          size="lg"
+          aria-labelledby="contained-modal-title-vcenter"
+          centered
           title="Create a new account"
           visible={isModalVisitble}
           onOk={handleOk}
           onCancel={handleCancel}
-          footer= {[]}
+          footer={[]}
         >
           <Signup />
         </Modal>

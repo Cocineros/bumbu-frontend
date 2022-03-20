@@ -8,30 +8,29 @@
 
 .container{
     max-width: 85%;
-  margin: auto;
-  background-color: rgba(255,255,255,0);
-  display: flex;
-  flex-flow: row wrap;
-  border-radius: 2%;
-  justify-content: center;
-  max-height: 100%; 
-  margin-bottom: 30px;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+    border-radius: 2%;
+    justify-content: center;
+    max-height: 100%; 
+    margin-bottom: 30px;
 
 }
 
 img {
-    height: 90px;
+    height: 80px;
     border-radius: 50px;
-    margin-bottom: 1rem;
+    margin: 1rem;
 }
 
 .card {
     margin: 2rem;
     flex: 1 0 200px;
     border-radius: 2%;
-    background-color: white;
+    background-color: transparent;
     opacity: 90%;
-    border: 1px solid #1a1a1a;
+    border: 2px solid rgb(206, 173, 131);
     padding: .5rem;
     text-align: center;
   }

@@ -1,0 +1,97 @@
+#page{
+    background-color: #f6f6e9;
+}
+
+#recipe-page {
+    margin: auto;
+}
+
+#back-function {
+    padding-top: 5vh;
+    margin-left: 5vw;
+    display: flex;
+    flex-direction: column;
+}
+#back-btn{
+    font-size: 4vh;
+    text-decoration: none;
+    color: gray
+}
+
+#back-text{
+    font-size: 2vh;
+}
+
+#dish-name-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#dish-name {
+    font-size: 6vh;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    margin-top: 2vh;
+}
+
+#ingredients-container {
+    height: 40vh;
+    width: 45vw;
+    margin-left: 5vw;
+    display: flex;
+    justify-content: center;
+}
+
+#directions-container {
+    margin-left: 5vw;
+    width: 45vw;
+    display: flex;
+    justify-content: center;
+}
+
+#sample-image{
+width: 500px;
+height: 500px;
+max-width: 100%;
+object-fit: scale-down;
+margin-bottom: 10vh;
+}
+
+#image-container{
+    display: flex;
+    justify-content: center;
+}
+
+#menu-bar{
+    height: 6vh;
+    width: 15vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 4vh;
+    position: relative;
+    top: 2vh;;
+    left: 65vw;
+
+}
+
+#ing-dir-container {
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 5vh;
+}
+
+.ingredient{
+    list-style-type: circle;
+
+}
+
+.ingredient:hover{
+    text-decoration: line-through;
+    list-style-type: circle;
+}
+

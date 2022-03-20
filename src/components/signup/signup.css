@@ -28,11 +28,10 @@ input {
     margin: 1rem ;
 }
 
-button {
-    background-color: rgba(214,177,177,255);
-    color: rgb(253, 253, 253);
+.btn {
+    color: rgb(255, 255, 255);
     font-size: 20px;
-    border: 2px solid rgb(199, 149, 149); 
+    border: 2px solid rgb(168, 133, 87); 
     border-radius: 6px;
     padding: 5px 22px;
     margin:0 auto;
