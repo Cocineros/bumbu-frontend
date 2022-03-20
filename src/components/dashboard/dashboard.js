@@ -15,6 +15,9 @@ import {
 import './dashboard.css'
 import MyRecipes from '../../assets/my-recipes.png'
 
+import TextField from "@mui/material/TextField";
+import RecipeList from '../recipeList/RecipeList'
+
 const { Header, Footer, Sider, Content } = Layout;
 
 export default function Dashboard() {
@@ -31,7 +34,9 @@ export default function Dashboard() {
         />
     );
 
-    const onSearch = value => console.log(value);
+    const onSearch = (value) => {
+        console.log(value)    
+    }
 
     const logout = (event) => {
         event.preventDefault();
@@ -57,6 +62,12 @@ export default function Dashboard() {
             return;
         }
     }
+//search bar inputhandler
+    const [inputText, setInputText] = useState("");
+    let inputHandler = (e) => {
+      var lowerCase = e.target.value.toLowerCase();
+      setInputText(lowerCase);
+    };
 
     return (
         <>
@@ -65,7 +76,14 @@ export default function Dashboard() {
             <Layout className ="layout">
             <Sider className="sidebar">
             <Space direction="vertical">
-                <Search className="search" placeholder="search for recipe" onSearch={onSearch} style={{ width: 200 }} />
+                {/* <Search className="search" placeholder="search for recipe" onSearch={onSearch} style={{ width: 200 }} /> */}
+                <TextField
+                id="outlined-basic"
+                onChange={inputHandler}
+                variant="outlined"
+                fullWidth
+                label="Search"
+        />
             </Space>
             <div class="dash-nav">     
             <AddRecipeModal/>
@@ -80,8 +98,10 @@ export default function Dashboard() {
             <div id="recipes-container">
             {/* <a href="/recipe">click here for recipe card </a> */}
             </div>
+
+            <RecipeList input={inputText} /> 
             </Content>
-            <Card />
+            <Card input={inputText}/>
             </Layout>
            
             
