@@ -1,6 +1,9 @@
 .section-title{
     display: flex;
     justify-content: center;
+    margin-top: 12vh;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: bold;
 }
 
 .container{
@@ -35,4 +38,6 @@ img {
 
   .card h2 {
       margin: center;
+      font-family: 'Source Sans Pro', sans-serif;
+
   }

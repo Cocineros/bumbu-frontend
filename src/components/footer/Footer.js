@@ -7,9 +7,6 @@ export default function Footer() {
              <h3>Bumbu © 2022</h3>
         <a href= "https://github.com/Cocineros"> 
             <GithubOutlined /> </a>
-            <p>thank you for supporting Bumbu and our vision
-
-                </p>
         </div>
     )
 }
