@@ -35,9 +35,7 @@ export default function GetSavedRecipes() {
         }
     }
 
-    // useEffect(() => {
-    //     window.location.reload()
-    // })
+    
 
     return (
         <div>

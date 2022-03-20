@@ -1,6 +1,9 @@
 import 'antd/dist/antd.css';
+import { useMutation } from '@apollo/client';
+import {useState} from 'react';
+import { REMOVE_PROFILE } from '../utils/mutations';
 import { Input, Space } from 'antd';
-import { AudioOutlined } from '@ant-design/icons';
+import { AudioOutlined, UserDeleteOutlined } from '@ant-design/icons';
 import { Layout } from 'antd';
 import Card from '../card/Card'
 import Auth from '../utils/auth';
@@ -15,6 +18,8 @@ import MyRecipes from '../../assets/my-recipes.png'
 const { Header, Footer, Sider, Content } = Layout;
 
 export default function Dashboard() {
+    const [showModal, setShowModal] = useState(false);
+    const [removeProfile] = useMutation(REMOVE_PROFILE);
     const { Search } = Input;
 
     const suffix = (
@@ -27,13 +32,36 @@ export default function Dashboard() {
     );
 
     const onSearch = value => console.log(value);
+
     const logout = (event) => {
         event.preventDefault();
         Auth.logout();
       };
+
+      const deleteProfile = async () => {
+        await removeProfile()
+        Auth.logout()
+      }
+
+
+    const renderModal = () => {
+        if(showModal) {
+            return (
+                <div className='deletepro-container'>
+                    <h4 className='deletepro-header'>Are you sure?</h4>
+                    <button className='deletepro-btn-yes' style= {{ cursor: "pointer" }} onClick={() => deleteProfile()}>Yes</button>
+                    <button style= {{ cursor: "pointer" }} onClick={() => setShowModal(false)}>No</button>
+                </div>
+            )
+        } else {
+            return;
+        }
+    }
+
     return (
         <>
         <div className="dash-container">
+            {renderModal()}
             <Layout className ="layout">
             <Sider className="sidebar">
             <Space direction="vertical">
@@ -44,15 +72,16 @@ export default function Dashboard() {
             </div>
             </Sider>
             <div class="vl"></div>
+            <button className="delete-btn" style= {{ cursor: "pointer" }} onClick={() => setShowModal(true)}><h3><UserDeleteOutlined />&nbsp; Delete Profile</h3></button>
             <Content>
             <div className="header">
             <img src={MyRecipes} id="my-recipes-header" />
             </div>
             <div id="recipes-container">
             {/* <a href="/recipe">click here for recipe card </a> */}
-            <Card />
             </div>
             </Content>
+            <Card />
             </Layout>
            
             
