@@ -2,9 +2,9 @@ import { React, useState } from 'react'
 import { QUERY_ME } from '../utils/queries';
 import { useQuery, useMutation } from '@apollo/client';
 import { REMOVE_RECIPE } from '../utils/mutations';
-import { DeleteOutlined } from '@ant-design/icons';
+import { EyeOutlined, DeleteOutlined } from '@ant-design/icons';
 import RecipeModal from '../recipeModal/RecipeModal';
-import { Card } from 'antd';
+import { Modal, Card } from 'antd';
 import SampleRecipe from '../../assets/sample-recipe-image.JPG'
 import './recipelist.css'
 
@@ -12,6 +12,18 @@ const { Meta } = Card;
 
 
 export default function RecipeList(props) {
+    const [isModalVisible, setIsModalVisible] = useState(false);
+    const viewModal = () => {
+        setIsModalVisible(true);
+    };
+
+    const handleOk = () => {
+        setIsModalVisible(false);
+    };
+
+    const handleCancel = () => {
+        setIsModalVisible(false);
+    };
     const [removeRecipe] = useMutation(REMOVE_RECIPE);
     const { loading, data } = useQuery(QUERY_ME);
 
@@ -19,7 +31,6 @@ export default function RecipeList(props) {
         return <div>Loading...</div>
     }
     console.log(data, "data")
-
 
     const handleRemoveRecipe = async (id) => {
         try {
@@ -53,16 +64,28 @@ export default function RecipeList(props) {
                         hoverable
                         style={{ width: 240 }}
                         cover={<img className="recipe-card-img" alt="example" src={SampleRecipe} />}>
-                        <Meta title={recipe.name} description={recipe.description}/>
-                        <Meta description={recipe.ingredients}/>
-                        <Meta description={recipe.instructions}/>
+                        <Meta title={recipe.name} description={recipe.description}
+                        />
+                        <Meta description={recipe.ingredients}
+                        /><Meta description={recipe.instructions}
+                        />
+                        <EyeOutlined className="icon" onClick={viewModal} />
+
                         <DeleteOutlined className="icon" onClick={() => handleRemoveRecipe(recipe._id)} />
-                        <RecipeModal />
+                        <Modal title={recipe.name} visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+                            {/* <ul>{ingredientsList}</ul> */}
+                            <img className="recipe-card-img" alt="example" src={SampleRecipe} />
+                            <p>{recipe.description}</p>
+                            <p>{recipe.ingredients}</p>
+                            <p>{recipe.instructions}</p>
+                        </Modal>
                         {/* <ul>{recipe.ingredients}</ul>
                         <ol>{recipe.instructions}</ol> */}
                     </Card>
                 </li>
             ))}
         </div>
+
     )
 }
+
