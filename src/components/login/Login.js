@@ -11,6 +11,7 @@ import Auth from '../utils/auth';
 export default function Login() {
     const [profileLogin, setProfileLogin] = useState({ email: '', password: '' });
     const [login, { error, data }] = useMutation(LOGIN_PROFILE);
+    const [loginError, setLoginError] = useState(false)
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -31,7 +32,7 @@ export default function Login() {
 
             Auth.login(data.login.token)
         } catch (error) {
-            console.error(error)
+            setLoginError(true)
         }
 
         setProfileLogin({
@@ -48,6 +49,7 @@ export default function Login() {
             </p>
             ) : (
                 <div id="login-form-container">
+                    {loginError && <div className='loginErr'>Your credentials are incorrect, please try again!</div>}
 
                 <form className="login-form" onSubmit={handleFormSubmit}>
 
