@@ -2,6 +2,8 @@
 
 # Bumbu Frontend
 https://github.com/Cocineros/bumbu-frontend
+https://bumbu-recipe-book.herokuapp.com/
+
 
 ## Description
 This app was created for users to store and share recipes with other users. Users can create accounts where they will have access to all their recipes, including directions, cook time, ingredients and a short description. These recipes will be displayed on attractive cards. Future versions will include filtering for time and orgainzing cards in various categories. 
