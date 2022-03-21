@@ -14,7 +14,10 @@ export default function Signup() {
     username: '',
     email: '',
     password: '',
+    confirmPassword: '',
   });
+
+  const [formError, setFormError] = useState(false)
 
   const [addProfile, { error, data }] = useMutation(ADD_PROFILE);
 
@@ -31,6 +34,17 @@ export default function Signup() {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
+    if (profileSignup.password !== profileSignup.confirmPassword) {
+      setProfileSignup({
+        ...profileSignup,
+        password: '',
+        confirmPassword: ''
+      })
+      setFormError(true)
+      return;
+    }
+
+    setFormError(false)
 
     try {
       const { data } = await addProfile({
@@ -122,8 +136,10 @@ export default function Signup() {
               name="confirmPassword"
               id="confirm-password"
               required
+              value={profileSignup.confirmPassword}
               onChange={handleChange}
             />
+            {formError && <div className='signupErr'>Passwords don't match, please try again!</div>}
 
             <button
                     className="btn"
