@@ -19,8 +19,6 @@ export default function Card() {
                     <input placeholder="Enter ingredients here"></input>
                     <h3>Directions:</h3>
                     <input placeholder="Enter directions here"></input>
-                    {/* <h3>Upload image:</h3>
-                    <input placeholder="Optional: upload image of dish here"></input> */}
                 </div>
                 <br></br>
                 <button>add recipe to cookbook</button>

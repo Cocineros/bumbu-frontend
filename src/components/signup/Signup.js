@@ -3,7 +3,6 @@ import './signup.css'
 import { Link } from 'react-router-dom'
 import { useMutation } from '@apollo/client'
 import { ADD_PROFILE } from '../utils/mutations'
-import LoginModal from '../login-modal/LoginModal'
 
 import Auth from '../utils/auth'
 
@@ -22,7 +21,6 @@ export default function Signup() {
   const [addProfile, { error, data }] = useMutation(ADD_PROFILE);
 
   const handleChange = (event) => {
-    console.log(event)
     const { name, value } = event.target;
 
     setProfileSignup({
