@@ -1,12 +1,23 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # Bumbu Frontend
-https://github.com/Cocineros/bumbu-frontend
-https://bumbu-recipe-book.herokuapp.com/
-
 
 ## Description
-This app was created for users to store and share recipes with other users. Users can create accounts where they will have access to all their recipes, including directions, cook time, ingredients and a short description. These recipes will be displayed on attractive cards. Future versions will include filtering for time and orgainzing cards in various categories. 
+"Bumbu" (pronounced boom-boo) is the Indonesian word for "spice", which was the inspiration for this recipe-saving application. Bumbu allows users to create a profile, login and write and save their favorite recipes onto their respective dashboards. To add a recipe, users may click the + button and complete the required input fields. Users may also search for their recipes using the search bar. 
+
+## Installation
+This is a responsive MERN stack application with communicating client and server applications.
+<br />
+Front-end Github repository: https://github.com/Cocineros/bumbu-frontend.git
+<br />
+Back-end Github repository: https://github.com/Cocineros/backend.git
+<br />
+To run this application locally, git clone this repository. Run `npm run watch` in the back-end directory. Run `npm start` in the front-end directory. 
+
+## Deployment
+This app was deployed on Heroku. Live link: 
+https://bumbu-recipe-book.herokuapp.com/
+
 
 ## Screenshot
 ![image](https://user-images.githubusercontent.com/88861538/159187590-33ae5f1c-a3f8-44c4-8ccb-28f41f72582e.png)
@@ -37,6 +48,9 @@ THEN I will be redirected to the homepage
 
 ## Contribution Guidelines
 Report bug and feature requests.
+
+## Further Development
+For further development of this application, we would like to implement an edit recipe mutation, that allows users to find one recipe and update its contents. We would also like to implement an email library that allows users to export and share their recipes. 
 
 ## Questions
 If you have any questions, please contact us:
