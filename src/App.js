@@ -17,7 +17,7 @@ import Dashboard from './components/dashboard/dashboard';
 import Recipe from './components/recipe/Recipe'
 
 const url = process.env.NODE_ENV === 'development'
-            ? '/graphql' : 'https://pure-ravine-56956.herokuapp.com/graphql'
+            ? '/graphql' : 'https://bumbu-backend.herokuapp.com/graphql'
 const httpLink = createHttpLink({
   uri: url,
 });
