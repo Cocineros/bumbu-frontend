@@ -10,14 +10,11 @@ import {
 import './home.css'
 import { BackTop } from 'antd';
 import Auth from '../utils/auth';
-import Dashboard from '../dashboard/dashboard';
+
 
 
 export default function Home() {
-  const logout = (event) => {
-    event.preventDefault();
-    Auth.logout();
-  };
+  
 
   return (
     <div>
