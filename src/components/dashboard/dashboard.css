@@ -16,6 +16,13 @@
      background-color: transparent;
  }
  
+ .greeting {
+     display: flex;
+     justify-content: center;
+     font-family: "Papyrus";
+     font-weight: 700;
+     font-size: 2rem;
+ }
  
  .deletepro-container {
      display: flex;
