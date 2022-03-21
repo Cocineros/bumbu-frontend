@@ -4,7 +4,7 @@ import { QUERY_ME } from '../utils/queries';
 import { useQuery, useMutation } from '@apollo/client';
 import { REMOVE_RECIPE } from '../utils/mutations';
 import { DeleteOutlined } from '@ant-design/icons';
-
+import { Modal } from 'antd';
 import { Card } from 'antd';
 import SampleRecipe from '../../assets/sample-recipe-image.JPG'
 import './recipelist.css'
@@ -13,6 +13,7 @@ const {Meta} = Card;
 
 
 export default function RecipeList(props) {
+
     const [showModal, setShowModal] = useState(false);
     const [removeRecipe] = useMutation(REMOVE_RECIPE);
     const { loading, data } = useQuery(QUERY_ME);
@@ -65,27 +66,26 @@ export default function RecipeList(props) {
     }
 
     return (
-        <div>
+        <div className='recipe-cards'>
             {renderModal()}
             {filteredData.map((recipe) => (
                 // <li key={recipe.id}> {recipe.name} </li>
-                <li className="site-card-border-less-wrapper">
+                <li>
                         {/* <a href="/recipe"> */}
-                        <Card key={recipe._id} 
+                        <Card className="recipe-card" key={recipe._id} 
                         hoverable
                         style={{ width: 240 }}
-                        cover={<img alt="example" src={SampleRecipe} />}>
-                        <Meta title={recipe.name} description={recipe.description, recipe.ingredients, recipe.instructions} />
-
-                        <button className="delete-btn" style={{ cursor: "pointer" }} onClick={() => 
+                        cover={<img className="recipe-card-img"alt="example" src={SampleRecipe} />}>
+                        <Meta title={recipe.name} description={recipe.description} />
+                        <DeleteOutlined className ="delete-icon" onClick={() => 
                             setShowModal(true)}
                             // handleRemoveRecipe(recipe._id)}
-                            >
-                            <h3><DeleteOutlined />&nbsp; Delete Recipe</h3></button>
+                            />
+                            {/* <h3><DeleteOutlined />&nbsp; Delete Recipe</h3></button> */}
                         </Card>
-                        {/* </a> */}
                     </li>
             ))}
         </div>
     )
 }
+

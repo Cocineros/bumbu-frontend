@@ -38,7 +38,7 @@ export default function GetSavedRecipes() {
     
 
     return (
-        <div>
+        <div className='card-container'>
             {data.me.savedRecipes.map((recipe) => {
                 console.log("recipe id", recipe)
                 return (

@@ -94,12 +94,13 @@ export default function Dashboard() {
             <div className="header">
             <img src={MyRecipes} id="my-recipes-header" />
             </div>
-            <div id="recipes-container">
-
+            <div id="container">
+                {/* <Card/> */}
+            <RecipeList input={inputText} /> 
             {/* <a href="/recipe">click here for recipe card </a> */}
             </div>
 
-            <RecipeList input={inputText} /> 
+
             </Content>
             </Layout>
            

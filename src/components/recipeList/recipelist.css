@@ -1,3 +1,37 @@
 li {
     list-style-type: none;
 }
+
+.recipe-cards {
+    max-width: 85%;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap ;
+    border-radius: 2%;
+    justify-content: center;
+    max-height: 100%; 
+    margin-bottom: 30px;
+}
+.recipe-card {
+    margin: 1rem;
+    flex: 0 1 200px;
+    border-radius: 6%;
+    background-color: transparent;
+    border: 2px solid rgb(206, 173, 131);
+    padding: .5rem;    
+    background-color: white;
+    height: 350px;
+  }
+
+  .recipe-card-img {
+    margin: .5rem;
+    border-radius: 6%;
+    padding: .5rem;   
+    height: 200px;
+    width: 200px;
+  }
+
+  .delete-icon {
+      float: right;
+      font-size: 25px;
+  }
