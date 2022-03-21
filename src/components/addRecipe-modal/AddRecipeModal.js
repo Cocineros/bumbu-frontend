@@ -1,12 +1,8 @@
-// import './addRecipe.css'
-
 import React, { useState } from 'react'
 import { Modal, Button } from 'antd';
-// import { NavLink } from 'react-router-dom'
-// import './signupModal.css'
-
 import AddRecipe from '../addRecipe/AddRecipe'
 import {PlusSquareFilled} from '@ant-design/icons';
+import './addrecipemodal.css'
 
 export default function AddRecipeModal() {
   const [isModalVisitble, setIsModalVisible] = useState(false);

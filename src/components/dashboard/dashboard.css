@@ -1,75 +1,67 @@
 .dash-container{
-   margin: 2rem;
-}
-
-.header {
-    margin-left: 5rem;
-    font-size: large;
-}
-
-.sidebar {
-    background-color: transparent;
-}
-
-.dash-nav {
-    text-align: left;
-    margin-left: 2rem;
-
-}
-.layout{
-    background-color: transparent;
-}
-
-.search {
-    margin-bottom: 2rem;
-}
-
-.vl {
-    border-left: 2px solid rgb(221, 221, 221);
-    height: 100vh;
-    position: absolute;
-    left: 19%;
-    margin-left: -3px;
-    top: 150px;
-  }
-
-  .delete-btn {
-    position: absolute;
-    bottom: 5%;
-    left: 5rem;
-    width: 10rem;
-}
-
-.deletepro-container {
-    display: flex;
-    flex-direction: column;
-    width: 8rem;
-    text-align: center;
-    padding: .5rem;
-    /* border: 2px solid;
-    border-radius: 25%; */
-    position: absolute;
-    bottom: 15%;
-    left: 6rem;
-    z-index: 1;
-}
-
-.deletepro-header {
-    text-decoration: overline;
-}
-
-.deletepro-btn-yes:hover {
-    background-color: red;
-}
-
-#container {
-    max-width: 85%;
-    margin: auto;
-    display: flex;
-    flex-flow: row wrap ;
-    border-radius: 2%;
-    justify-content: center;
-    max-height: 100%; 
-    margin-bottom: 30px;
-}
-
+    margin: 2rem;
+ }
+ 
+ .header {
+     display: flex;
+     justify-content: center;
+     font-size: large;
+ }
+ 
+ .sidebar {
+     background-color: transparent;
+ }
+ 
+ .layout{
+     background-color: transparent;
+ }
+ 
+ 
+ .deletepro-container {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     width: 12rem;
+     height: 10rem;
+     text-align: center;
+     position: relative;
+     bottom: 220px;
+     z-index: 1;
+     background-color: pink;
+     border: solid 2px rgb(182, 127, 91);
+ }
+ 
+ .deletepro-btn{
+     width: 60%;
+     margin-top: 1rem;
+ }
+ .deletepro-btn-yes:hover {
+     background-color: red;
+     color: white;
+ }
+ 
+ #container {
+     max-width: 100%;
+     margin: auto;
+     display: flex;
+     flex-flow: row wrap ;
+     border-radius: 2%;
+     justify-content: center;
+     max-height: 100%; 
+     margin-bottom: 30px;
+ }
+ 
+ .dash-nav{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin-top: 1rem;
+ }
+ 
+ .delete-btn {
+     align-self: center;
+ }
+ 
+ 
+ 
+ 

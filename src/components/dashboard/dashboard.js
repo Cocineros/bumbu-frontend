@@ -7,7 +7,6 @@ import { AudioOutlined, UserDeleteOutlined } from '@ant-design/icons';
 import { Layout } from 'antd';
 import Card from '../card/Card'
 import Auth from '../utils/auth';
-import RecipeModal from '../recipeModal/RecipeModal'
 import AddRecipeModal from '../addRecipe-modal/AddRecipeModal'
 import {
     PlusSquareFilled,
@@ -18,6 +17,8 @@ import MyRecipes from '../../assets/my-recipes.png'
 
 import TextField from "@mui/material/TextField";
 import RecipeList from '../recipeList/RecipeList'
+import { BackTop } from 'antd';
+
 
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -54,9 +55,9 @@ export default function Dashboard() {
         if(showModal) {
             return (
                 <div className='deletepro-container'>
-                    <h4 className='deletepro-header'>Are you sure?</h4>
-                    <button className='deletepro-btn-yes' style= {{ cursor: "pointer" }} onClick={() => deleteProfile()}>Yes</button>
-                    <button style= {{ cursor: "pointer" }} onClick={() => setShowModal(false)}>No</button>
+                    <h4 className='deletepro-header'>We'd hate to see you go :( Are you sure?</h4>
+                    <button className='deletepro-btn-yes deletepro-btn' style= {{ cursor: "pointer" }} onClick={() => deleteProfile()}>Yes</button>
+                    <button className="deletepro-btn" style= {{ cursor: "pointer" }} onClick={() => setShowModal(false)}>No</button>
                 </div>
             )
         } else {
@@ -73,39 +74,37 @@ export default function Dashboard() {
     return (
         <>
         <div className="dash-container">
-            {renderModal()}
-            <Layout className ="layout">
-            <Sider className="sidebar">
-            <Space direction="vertical">
-                <TextField
-                id="outlined-basic"
-                onChange={inputHandler}
-                variant="outlined"
-                fullWidth
-                label="Search"
-        />
-            </Space>
-            <div className="dash-nav">     
-            <AddRecipeModal/>
-            </div>
-            </Sider>
-            <div className="vl"></div>
-            <button className="delete-btn" style= {{ cursor: "pointer" }} onClick={() => setShowModal(true)}><h3><UserDeleteOutlined />&nbsp; Delete Profile</h3></button>
+            <Layout className="layout">
+            {/* <Sider className="sidebar"> */}
+
+            {/* </Sider> */}
+            {/* <div className="vl"></div> */}
             <Content>
             <div className="header">
             <img src={MyRecipes} id="my-recipes-header" />
             </div>
+            <div className="dash-nav">
+                <Space direction="vertical">
+                <TextField className="search-bar dash-nav search-bar"
+                id="outlined-basic"
+                onChange={inputHandler}
+                variant="outlined"
+                fullWidth
+                label="Search my recipes"/>
+                <AddRecipeModal/>
+                </Space>    
+                </div>
             <div id="container">
-                {/* <Card/> */}
             <RecipeList input={inputText} /> 
             {/* <a href="/recipe">click here for recipe card </a> */}
             </div>
-
-
+                <div className="del-pro-btn-container">
+                <button className="delete-btn" style= {{ cursor: "pointer" }} onClick={() => setShowModal(true)}><h3><UserDeleteOutlined />&nbsp; Delete Profile</h3></button>
+            {renderModal()}
+            </div>
             </Content>
             </Layout>
-           
-            
+            <BackTop />
         </div>
         </>
     )
