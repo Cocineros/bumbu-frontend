@@ -1,7 +1,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-# Bumbu 
-// links
+# Bumbu Frontend
+https://github.com/Cocineros/bumbu-frontend
 
 ## Description
 This app was created for users to store and share recipes with other users. Users can create accounts where they will have access to all their recipes, including directions, cook time, ingredients and a short description. These recipes will be displayed on attractive cards. Future versions will include filtering for time and orgainzing cards in various categories. 
@@ -37,7 +37,22 @@ THEN I will be redirected to the homepage
 Report bug and feature requests.
 
 ## Questions
-If you have any questions, please contact us on 
+If you have any questions, please contact us:
+
+Amadea Margo
+https://github.com/amadeamargo
+
+Ayse Jones
+https://github.com/AJones1200
+
+Brian Garland
+https://github.com/Bgar28
+
+Janette Castillo
+https://github.com/jcastillo9
+
+Josshy Olea
+https://github.com/josshy92 
 
 ## License 
 Licensed under [MIT License](https://opensource.org/licenses/MIT).
