@@ -71,6 +71,9 @@ export default function Nav(){
         ):(
             <>
             <div id="nav-logo-container">
+                {/* <a href="/">
+                <img src={BumbuName} id="bumbu-name" />
+                </a> */}
                 <a href="/">
                 <img src={Logo} id="bumbu-logo"/>
                 </a>

@@ -62,3 +62,14 @@
     background-color: red;
 }
 
+#container {
+    max-width: 85%;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap ;
+    border-radius: 2%;
+    justify-content: center;
+    max-height: 100%; 
+    margin-bottom: 30px;
+}
+
