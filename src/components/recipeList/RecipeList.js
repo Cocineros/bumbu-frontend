@@ -53,9 +53,13 @@ export default function RecipeList(props) {
                         hoverable
                         style={{ width: 240 }}
                         cover={<img className="recipe-card-img" alt="example" src={SampleRecipe} />}>
-                        <Meta title={recipe.name} description={recipe.description} />
+                        <Meta title={recipe.name} description={recipe.description}/>
+                        <Meta description={recipe.ingredients}/>
+                        <Meta description={recipe.instructions}/>
                         <DeleteOutlined className="icon" onClick={() => handleRemoveRecipe(recipe._id)} />
                         <RecipeModal />
+                        {/* <ul>{recipe.ingredients}</ul>
+                        <ol>{recipe.instructions}</ol> */}
                     </Card>
                 </li>
             ))}

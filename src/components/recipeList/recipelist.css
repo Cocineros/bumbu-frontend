@@ -20,7 +20,7 @@ li {
     border: 2px solid rgb(206, 173, 131);
     padding: .5rem;    
     background-color: white;
-    height: 350px;
+    height: auto;
   }
 
   .recipe-card-img {
@@ -36,3 +36,6 @@ li {
       font-size: 25px;
       margin-left: 1rem;
   }
+  .icon:hover { 
+    transform: scale(1.1); 
+    }
