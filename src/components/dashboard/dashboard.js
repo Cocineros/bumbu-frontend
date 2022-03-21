@@ -7,6 +7,7 @@ import { AudioOutlined, UserDeleteOutlined } from '@ant-design/icons';
 import { Layout } from 'antd';
 import Card from '../card/Card'
 import Auth from '../utils/auth';
+import RecipeModal from '../recipeModal/RecipeModal'
 import AddRecipeModal from '../addRecipe-modal/AddRecipeModal'
 import {
     PlusSquareFilled,

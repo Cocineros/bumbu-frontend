@@ -31,7 +31,8 @@ li {
     width: 200px;
   }
 
-  .delete-icon {
+  .icon {
       float: right;
       font-size: 25px;
+      margin-left: 1rem;
   }
