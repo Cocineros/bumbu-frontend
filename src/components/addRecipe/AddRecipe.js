@@ -14,7 +14,6 @@ export default function MakeRecipe() {
   const [createRecipe, { error, data }] = useMutation(ADD_RECIPE);
 
   const handleChange = (event) => {
-    console.log(event)
     const { name, value } = event.target;
 
     setAddRecipe({
@@ -30,10 +29,8 @@ export default function MakeRecipe() {
         variables: { ...addRecipe },
       });
 
-      console.log("Success!",addRecipe)
     } catch (error) {
-      console.error("Yo! this is an error",error);
-      console.log("this is recipe", addRecipe)
+      console.error(error);
     }
 
     setAddRecipe({

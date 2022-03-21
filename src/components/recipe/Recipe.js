@@ -1,13 +1,8 @@
 import './recipe.css'
 import SampleImage from '../../assets/sample-recipe-image.JPG'
 import { EditOutlined, DeleteOutlined, ShareAltOutlined, RollbackOutlined } from '@ant-design/icons';
-import { useState } from 'react'
 
 export default function Recipe() {
-    // const [ isActive, setActive ] = useState("false");
-    // const toggleClass = () => {
-    //     setActive(!isActive);
-    // }
 
     return (
         <>

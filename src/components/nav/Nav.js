@@ -1,7 +1,5 @@
-import { NavLink } from 'react-router-dom';
 import './nav.css'
 import { useState } from "react";
-// import BumbuName from '../../assets/bumbu-name.png'
 import Logo from '../../assets/bumbu-logo-artwork.png'
 import { FiMenu, FiX } from 'react-icons/fi';
 import Auth from '../utils/auth';
@@ -12,18 +10,6 @@ import LoginModal from '../login-modal/LoginModal';
 
 export default function Nav(){
     const [isModalVisitble, setIsModalVisible] = useState(false);
-
-  const showModal = () => {
-    setIsModalVisible(true);
-  };
-
-  const handleOk = () => {
-    setIsModalVisible(false);
-  };
-
-  const handleCancel = () => {
-    setIsModalVisible(false);
-  };
   
     const [open, setOpen] = useState(false);
 
@@ -71,9 +57,6 @@ export default function Nav(){
         ):(
             <>
             <div id="nav-logo-container">
-                {/* <a href="/">
-                <img src={BumbuName} id="bumbu-name" />
-                </a> */}
                 <a href="/">
                 <img src={Logo} id="bumbu-logo"/>
                 </a>

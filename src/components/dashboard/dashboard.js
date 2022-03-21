@@ -3,25 +3,19 @@ import { useQuery, useMutation } from '@apollo/client';
 import { useState } from 'react';
 import { QUERY_ME } from '../utils/queries';
 import { REMOVE_PROFILE } from '../utils/mutations';
-import { Input, Space } from 'antd';
+import { Space } from 'antd';
 import { AudioOutlined, UserDeleteOutlined } from '@ant-design/icons';
 import { Layout } from 'antd';
-import Card from '../card/Card'
 import Auth from '../utils/auth';
 import AddRecipeModal from '../addRecipe-modal/AddRecipeModal'
-import {
-    PlusSquareFilled,
-    LoginOutlined
-} from '@ant-design/icons';
 import './dashboard.css'
 import MyRecipes from '../../assets/my-recipes.png'
-
 import TextField from "@mui/material/TextField";
 import RecipeList from '../recipeList/RecipeList'
 import { BackTop } from 'antd';
 
 
-const { Header, Footer, Sider, Content } = Layout;
+const { Content } = Layout;
 
 export default function Dashboard() {
     const [removeProfile] = useMutation(REMOVE_PROFILE);
@@ -34,8 +28,6 @@ export default function Dashboard() {
     }
     console.log(data, "data")
 
-    const { Search } = Input;
-
 
     const suffix = (
         <AudioOutlined
@@ -45,10 +37,6 @@ export default function Dashboard() {
             }}
         />
     );
-
-    const onSearch = (value) => {
-        console.log(value)
-    }
 
     const logout = (event) => {
         event.preventDefault();
@@ -61,8 +49,6 @@ export default function Dashboard() {
     }
 
     const profileName = data.me.firstName
-    console.log(profileName)
-
 
     const renderModal = () => {
         if (showModal) {
@@ -87,10 +73,6 @@ export default function Dashboard() {
         <>
             <div className="dash-container">
                 <Layout className="layout">
-                    {/* <Sider className="sidebar"> */}
-
-                    {/* </Sider> */}
-                    {/* <div className="vl"></div> */}
                     <Content>
                         <div className='greeting'>
                             <p>Welcome, {profileName} !</p>
@@ -111,7 +93,6 @@ export default function Dashboard() {
                         </div>
                         <div id="container">
                             <RecipeList input={inputText} />
-                            {/* <a href="/recipe">click here for recipe card </a> */}
                         </div>
                         <div className="del-pro-btn-container">
                             <button className="delete-btn" style={{ cursor: "pointer" }} onClick={() => setShowModal(true)}><h3><UserDeleteOutlined />&nbsp; Delete Profile</h3></button>

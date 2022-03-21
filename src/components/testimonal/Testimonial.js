@@ -1,6 +1,4 @@
 import './testimonial.css'
-import { Avatar, Image, Card } from 'antd';
-import { EditOutlined, EllipsisOutlined, SettingOutlined, UserOutlined } from '@ant-design/icons';
 
 export default function Testimonial() {
     return (
